@@ -1,0 +1,52 @@
+body{
+    background-color: ghostwhite;
+}
+.caja{
+    padding: 1.5em;
+    width: 940px;
+    
+}
+.ingresarTexto{
+    width: 70%;
+    margin: 0 auto;
+}
+.texto{
+    text-transform: lowercase;
+}
+.noMayus{
+    color: #495057;
+}
+.noMayus::before{
+    width: 16px;
+    height: 16px;
+    border-radius: 50% ;
+    content: "\0021";
+    background:grey;
+    color: white;
+}
+.enviar{
+    background: #0A3871;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    width: 328px;
+    height: 67px;
+}
+.desencrip{
+    background:#D8DFE8;
+    border-color: #0A3871;
+    border-radius: 15px;
+    color: #0A3871;
+    width: 328px;
+    height: 67px;
+    
+}
+.textoEncriptado{
+    display: block;
+    width: 30%;
+    margin-left: 0 auto;
+    background-color: #FFFFFF;
+}
+.cifrado{
+    text-align: center;
+}
