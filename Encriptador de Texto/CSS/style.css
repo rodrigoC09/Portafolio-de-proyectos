@@ -1,52 +1,241 @@
-body{
-    background-color: ghostwhite;
+*{
+    background-color: #F3F5FC;
+    font-family: "Inter";
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 150%; 
 }
 .caja{
-    padding: 1.5em;
-    width: 940px;
+    padding-top: 10px;
+    padding-left: 10px;
+    width: 15%;
     
 }
-.ingresarTexto{
-    width: 70%;
-    margin: 0 auto;
+main{
+    display: flex;
+    margin-bottom: 50px;
+    margin-left: 5%;
+    margin-right: 5%;
+    
 }
-.texto{
+
+.text-area{
     text-transform: lowercase;
+    height: 440px;
+    border: none;
+    margin-top: 20px;
+    color: #0A3871;
+    resize: none;
+    width: 90%;
+    
 }
+::placeholder{color: #0A3871;}
+  .text-area:focus{
+    outline: none;
+  }
 .noMayus{
     color: #495057;
+    font-size: 18px;
+    text-align: center;
+    
 }
-.noMayus::before{
-    width: 16px;
-    height: 16px;
-    border-radius: 50% ;
-    content: "\0021";
-    background:grey;
-    color: white;
-}
+
+.botones{
+    display: flex;
+    margin-top: 18px;
+    margin-right: 5%;
+} 
+
 .enviar{
     background: #0A3871;
-    border: none;
+    border: 1px solid #0A3871;
     border-radius: 15px;
     color: white;
     width: 328px;
     height: 67px;
+    cursor: pointer;
+    margin-right: 15px;
 }
 .desencrip{
     background:#D8DFE8;
-    border-color: #0A3871;
+    border-color: 1px solid #0A3871;
     border-radius: 15px;
     color: #0A3871;
     width: 328px;
     height: 67px;
+    cursor: pointer;
     
 }
-.textoEncriptado{
-    display: block;
-    width: 30%;
-    margin-left: 0 auto;
+
+.mensaje{
     background-color: #FFFFFF;
+    background-image: url("../imagenes/Muñeco.svg");
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 25px;
+    color: #0A3871;
+    resize: none;
+    width: 90%;
+    
+    
+    
 }
-.cifrado{
+.mensaje::placeholder{
+    color: black;
+    font-weight: bold;
     text-align: center;
+    opacity: 1;
+    
 }
+.mensaje:focus{
+    outline: none;
+    
+}
+.plac{
+    color: #F3F5FC;
+    border-radius: 25px;
+    border: none;
+    resize: none;
+    font-size: 16px;
+    display: block;
+    position: relative;
+    width: 90%;
+    pointer-events: none;
+    
+}
+.plac::placeholder{
+    text-align: center;
+    
+}
+.copiarTexto{
+    
+    display: block;
+    border: 1px solid #0A3871;
+    border-radius: 15px;
+    color: #0A3871;
+    cursor: pointer;
+    height: 67px;
+    margin: 0 auto;
+    
+    width: 336px;
+    
+}
+
+@media screen and (max-width:480px){
+    
+    .caja{
+        padding-top: 5px;
+        padding-left: 5px;
+        width: 15%;
+        
+    }
+    main{
+        display: block;
+        margin-bottom: 10px;
+        margin-left: 20px;
+        padding-left:20px;
+    }
+    
+    .text-area{
+        margin-top: 20px;
+        width: 90%;
+        resize: none;
+        height: 300px;
+        
+    }
+    h1{
+        text-align: center;
+    }
+    .botones{
+        
+        display: block;
+        margin-top: 18px;
+        
+    }
+    .enviar{
+        
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    .desencrip{
+        
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    .mensaje{
+        background-color: #FFFFFF;
+        border: none;
+        width: 95%;
+        height: auto;
+        background-image:none;
+        resize: none;
+        text-overflow: ellipsis;
+        padding-top: 20%;
+        margin-top: 5%;
+    }
+    .copiarTexto{
+        margin-left:-10px;
+        margin-bottom: 10px;
+        position: relative;
+        width: 100%;
+    }
+    
+}
+@media screen and (max-width:1175px){
+    .caja{
+        padding-top: 30px;
+        padding-left: 5px;
+        width: 15%;
+        
+    }
+    main{
+        display: block;
+        margin-bottom: 10px;
+        margin-left: 20px;
+    }
+    .text-area{
+        margin-top: 20px;
+        width: 95%;
+        resize: none;
+        height: 300px;
+        
+    }
+    .enviar{
+        margin-right: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    .desencrip{
+        margin-right: -8%;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    .secMensaje{
+        position: relative;
+    }
+    .mensaje{
+        background-color: #FFFFFF;
+        border: none;
+        width: 80%;
+        height: 200px;
+        background-image: none;
+        resize: none;
+        margin-left: 5%;
+        
+    }
+    .copiarTexto{
+        
+        margin-bottom: 15px;
+        position: relative;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:1175px){
+    .secMensaje{
+        position: absolute;
+        right: 15px;
+        
+    }
+} 
+
