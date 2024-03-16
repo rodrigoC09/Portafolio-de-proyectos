@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <title>Encriptador de texto</title>
+</head>
+<body>
+    <header>
+        <div class="caja">
+            <img src="imagenes/Logo.svg" alt="logo alura latam">
+        </div>
+    </header>
+    <main>
+        <section class="secTextA">
+            <textarea cols="30" rows="10"  placeholder="Ingresa el texto aqui" class="text-area" onkeypress="return ' abcdefghijklmnñopqrstuvwxyz'.includes(event.key)"></textarea>
+            <div>
+
+                <h6 class="noMayus"><img src="imagenes/exclamation-circle.svg"> Solo letras minúsculas y sin acentos</h6>
+            </div>
+            <div class="botones">
+                <button class="enviar" onclick="btnEncriptar()">Enviar</button>
+                <button class="desencrip" onclick="btnDesencriptar()">Desencriptar</button>
+            </div>
+        </section>
+
+        <section class="secMensaje">
+            
+            <!-- <textarea onblur="setPlace(this)" onfocus="unsetPlace(this)" class="mensaje" cols="20" rows="10" onkeypress="return ' abcdefghijklmnñopqrstuvwxyz'.includes(event.key)" placeholder=""></textarea>  -->
+            
+            <textarea onkeyup="setPlace()" class="mensaje" cols="20" rows="10" onkeypress="return ' abcdefghijklmnñopqrstuvwxyz'.includes(event.key)" onkeydown="repetir()" placeholder="Ningún mensaje fue encontrado"></textarea> 
+            
+            <textarea class="plac" placeholder="Ingresa el texto que desees encriptar o desencriptar."></textarea>
+            <div>
+                <button class="copiarTexto" onclick="btnCopiar()">Copiar</button>
+            </div>
+        </section>
+    </main>
+    <script src="JS/script.js"></script>
+</body>
+</html>
